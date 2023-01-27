@@ -17,10 +17,22 @@ home.addEventListener('click', () => {
     
 });
 
+// notis
 
-gsap.set('.bell', {transformOrigin: "top center" });
+
+gsap.set(".bell", {transformOrigin: "top center" });
+gsap.set(".ringer", {transformOrigin: "top center" });
+gsap.set(".wave", {opacity:0, transformOrigin: "bottom" });
+notifications.addEventListener("click", () => {
+    gsap.fromTo(".bell",
+     {rotation: -5 },
+     { rotation: 0, duration: 2, ease:"elastic.easeOut(5, 0.2)"  }
+     );
+     gsap.fromTo(".ringer",
+     {rotation: -3, x: 0.5 },
+     { rotation: 0, duration: 1, ease:"elastic.easeOut(5, 0.2)"  }
+     );
+    gsap.fromTo('.wave', {scale: 0, opacity: 1 }, {scale: 1.3, opacity: 0, duration: 1});
 
 
-notifications.addEventListener('click', () => {
-    gsap.fromTo('.bell', {rotation: -5 }, { rotation: 0, duration: 2, ease:"elastic.easeOut(5, 0.2)"  });
-})
+});
