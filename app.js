@@ -5,8 +5,8 @@ const home = document.querySelector(".home");
 const notifications = document.querySelector(".notifications");
 
 
-gsap.set('.feather', {scale: 0, transformOrigin: "center"});
-home.addEventListener('click', () => {
+gsap.set(".feather", {scale: 0, transformOrigin: "center"});
+home.addEventListener("click", () => {
     gsap.fromTo(".home-svg", { scale: 1}, {scale: 0.9, yoyo: true, repeat:1 }); // seteado animacion explosion
     gsap.fromTo(".feather", 
     { y: -5, scale: 0}, 
@@ -26,13 +26,13 @@ gsap.set(".wave", {opacity:0, transformOrigin: "bottom" });
 notifications.addEventListener("click", () => {
     gsap.fromTo(".bell",
      {rotation: -5 },
-     { rotation: 0, duration: 2, ease:"elastic.easeOut(5, 0.2)"  }
+     { rotation: 0, duration: 2, ease:"elastic.out(5, 0.2)"  }
      );
      gsap.fromTo(".ringer",
      {rotation: -3, x: 0.5 },
-     { rotation: 0, duration: 1, ease:"elastic.easeOut(5, 0.2)"  }
+     {rotation: 0, x: 0, duration: 1, ease: "elastic.out(5, 0.2)" }
      );
-    gsap.fromTo('.wave', {scale: 0, opacity: 1 }, {scale: 1.3, opacity: 0, duration: 1});
+    gsap.fromTo(".wave", {scale: 0, opacity: 1 }, {scale: 1.3, opacity: 0, duration: 1});
 
 
 });
