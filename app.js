@@ -32,7 +32,7 @@ notifications.addEventListener("click", () => {
      {rotation: -3, x: 0.5 },
      {rotation: 0, x: 0, duration: 1, ease: "elastic.out(5, 0.2)" }
      );
-    gsap.fromTo(".wave", {scale: 0, opacity: 1 }, {scale: 1.3, opacity: 0, duration: 1});
+    gsap.fromTo(".wave", {scale: 0, opacity: 100 }, {scale: 1.3, opacity: 0, duration: 1});
 
 
 });
