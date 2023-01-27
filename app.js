@@ -2,6 +2,7 @@ const tl = gsap.timeline({defaults: {duration: 0.35, ease: "Power2.easeOut"  }
 });
 
 const home = document.querySelector(".home");
+const notifications = document.querySelector(".notifications");
 
 
 gsap.set('.feather', {scale: 0, transformOrigin: "center"});
@@ -15,3 +16,11 @@ home.addEventListener('click', () => {
     gsap.fromTo(".right-feather", { x:0 }, { x:5 });
     
 });
+
+
+gsap.set('.bell', {transformOrigin: "top center" });
+
+
+notifications.addEventListener('click', () => {
+    gsap.fromTo('.bell', {rotation: -5 }, { rotation: 0, duration: 2, ease:"elastic.easeOut(5, 0.2)"  });
+})
