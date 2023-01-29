@@ -15,14 +15,14 @@ body {
 }
 
 .container{
-  background: white;
+  background: rgb(230, 212, 212);
   padding: 5rem;
   border-radius: 2rem;
 }
 
 .home,
 .notifications,
-.messages{
+.messages {
   display: flex;
   padding: 2rem;
   align-items: center;
@@ -30,11 +30,11 @@ body {
 
 .home-title,
 .notification-title,
-.message-title{
+.message-title {
   padding-left: 2rem;
 }
 
 .notification-svg,
-.message-svg {
+.messages-svg {
   overflow: visible;
 }
