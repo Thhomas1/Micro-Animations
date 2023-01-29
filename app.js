@@ -3,7 +3,7 @@ const tl = gsap.timeline({defaults: {duration: 0.35, ease: "Power2.easeOut"  }
 
 const home = document.querySelector(".home");
 const notifications = document.querySelector(".notifications");
-const messages = document.querySelector('.messages');
+const messages = document.querySelector(".messages");
 
 gsap.set(".feather", {scale: 0, transformOrigin: "center"});
 home.addEventListener("click", () => {
@@ -40,10 +40,10 @@ notifications.addEventListener("click", () => {
 // mensajes
 
 gsap.set(".flap", {transformOrigin: "top"});
-messages.addEventListener('click', () => {
+messages.addEventListener("click", () => {
     tl.fromTo(".messages-svg", { scale: 1}, {scale: 0.9 });
     tl.fromTo(".flap", {scale: 1}, {scale: -1}, "<50%");
     tl.fromTo(".messages-svg", {scale: 0.9}, {scale: 1}, "<50%");
-    tl.fromTo(".note", {y: 0, opacity: 1}, { y: -40, opacity: 0, duration: 0.75}); 
-    tl.to('.flap', {scale: 1});
+    tl.fromTo(".note",{y: 0, opacity: 1},{ y: -40, opacity: 0, duration: 0.75}); 
+    tl.to(".flap", {scale: 1}, "<50%");
 });
