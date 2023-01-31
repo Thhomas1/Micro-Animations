@@ -15,9 +15,9 @@ body {
 }
 
 .container{
-  background: rgb(230, 212, 212);
+  background: rgb(224, 199, 199);
   padding: 5rem;
-  border-radius: 2rem;
+  border-radius: 3rem;
 }
 
 .home,
@@ -31,7 +31,7 @@ body {
 .home-title,
 .notification-title,
 .message-title {
-  padding-left: 2rem;
+  padding-left: 1.6rem;
 }
 
 .notification-svg,
